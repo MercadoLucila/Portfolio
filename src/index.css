@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+body {
+  background: rgb(10, 15, 30);
+  overflow: hidden;
+}
+
+/* ----- Sección de componentes para el fondo ----- */
+
+/* Colores */
+.white{
+  background-color: white;
+}
+
+.violet{
+  background-color: rgb(135, 49, 216);
+}
+
+.cyan{
+  background-color: aqua;
+}
+
+.pink{
+  background-color: rgb(255, 0, 242);
+}
+
+/* Animacion para las estrellas */
+@keyframes twinkle {
+  0%,100%  { opacity: 0.1; }
+  50%  { opacity: 1; }
+}
+
+.animate-twinkle {
+  animation-name: twinkle;
+  animation-iteration-count:infinite;
+  animation-timing-function:ease-in-out;
+}
+
+
+/* Nebulosa */
+.nebula {
+  position: absolute;
+  border-radius:50%;
+  filter:blur(80px);
+  opacity:0.25;
+  pointer-events: none;
+  animation: nebula-float linear infinite;
+}
+
+@keyframes nebula-float {
+  from{
+    transform:translate(0,0) rotate(0deg);
+  }to{
+    transform:translate(40px, -40px) rotate (360deg);
+  }
+}
+
